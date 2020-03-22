@@ -31,6 +31,7 @@ set noshiftround
 
 " Display 5 lines above/below the cursor when scrolling with a mouse.
 set scrolloff=5
+
 " Fixes common backspace problems
 set backspace=indent,eol,start
 
@@ -46,10 +47,6 @@ set showcmd
 
 " Highlight matching pairs of brackets. Use the '%' character to jump between them.
 set matchpairs+=<:>
-
-" Display different types of white spaces.
-set listchars=eol:¬,tab:>·,trail:~,extends:>,precedes:<,space:␣
-set list
 
 " Show line numbers
 set number
@@ -79,3 +76,8 @@ vnoremap <Space> zf
 " Automatically save and load folds
 autocmd BufWinLeave *.* mkview
 autocmd BufWinEnter *.* silent loadview"
+
+if has('gui_running')
+  set guifont=Inconsolata_Regular:h16
+  colorscheme ron
+endif
