@@ -73,6 +73,9 @@ set viminfo='100,<9999,s100
 nnoremap <silent> <Space> @=(foldlevel('.')?'za':"\<Space>")<CR>
 vnoremap <Space> zf
 
+# making markdown syntax highlighting work properly for md files
+au BufNewFile,BufFilePre,BufRead *.md set filetype=markdown
+
 " Automatically save and load folds
 autocmd BufWinLeave *.* mkview
 autocmd BufWinEnter *.* silent loadview"
