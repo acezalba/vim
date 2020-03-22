@@ -48,8 +48,8 @@ set showcmd
 set matchpairs+=<:>
 
 " Display different types of white spaces.
+set listchars=eol:¬,tab:>·,trail:~,extends:>,precedes:<,space:␣
 set list
-set listchars=tab:›\ ,trail:•,extends:#,nbsp:.
 
 " Show line numbers
 set number
@@ -58,7 +58,7 @@ set number
 set statusline=%F%m%r%h%w\ [FORMAT=%{&ff}]\ [TYPE=%Y]\ [POS=%l,%v][%p%%]\ [BUFFER=%n]\ %{strftime('%c')}
 
 " Encoding
-set encoding=utf-8
+set encoding=utf-32
 
 " Highlight matching search patterns
 set hlsearch
